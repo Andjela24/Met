@@ -1,0 +1,26 @@
+<div class="container mt-3">
+  <h3>Search a room with a price:</h3>
+  <input
+    type="text"
+    name="name"
+    id="search"
+    class="form-control"
+    [(ngModel)]="textSearch"
+    value="Type here..."
+  />
+  <br />
+  <button class="btn btn-success" (click)="randomize()">Sort randomly</button>
+  <br />
+  <br />
+</div>
+<div class="row">
+  <ul class="list-group">
+    <app-room-item
+      *ngFor="let room of rooms
+    | filter:textSearch
+    "
+      [room]="room"
+    >
+    </app-room-item>
+  </ul>
+</div>

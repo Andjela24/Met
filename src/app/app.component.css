@@ -1,0 +1,14 @@
+div {
+  text-align: center;
+}
+.selected {
+  color: red;
+}
+#title {
+  text-align: center;
+  color: #72cc87;
+}
+#form {
+  margin-left: 10%;
+  margin-right: 10%;
+}

@@ -1,0 +1,64 @@
+<h1 id="title">MetHotels</h1>
+<div class="container mt-3">
+  <div class="row" id="form">
+    <div class="mb-3">
+      <form>
+        <label for="name">Name : </label>
+        <input
+          type="text"
+          name="name"
+          #name
+          id="name"
+          class="form-control"
+          value=""
+          title=""
+          required="required"
+        /><br />
+        <label for="description">Description : </label>
+        <input
+          type="text"
+          name="description"
+          #description
+          id="description"
+          class="form-control"
+          value=""
+          title=""
+          required="required"
+        /><br />
+        <label for="price">Price : </label>
+        <input
+          type="text"
+          name="price"
+          id="price"
+          #price
+          class="form-control"
+          value=""
+          title=""
+          required="required"
+        /><br />
+        <label for="imgPath">Image Path : </label>
+        <input
+          type="text"
+          name="imgPath"
+          #imgPath
+          id="imgPath"
+          class="form-control"
+          value=""
+          title=""
+          required="required"
+        /><br /><br />
+        <button
+          (click)="addRoom(name.value,description.value,price.value,imgPath.value)"
+          type="button"
+          class="btn btn-success"
+        >
+          Add Rooms
+        </button>
+        <br /><br />
+      </form>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <app-room-list [rooms]="rooms"></app-room-list>
+  </div>
+</div>
